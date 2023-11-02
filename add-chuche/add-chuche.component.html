@@ -1,0 +1,20 @@
+<div>
+  <input type="text" placeholder="name" #name />
+  <input type="number" placeholder="price" #price />
+  <input type="text" placeholder="category" #category />
+  <input type="text" placeholder="color" #color />
+  <input type="text" placeholder="image" #image />
+  <button
+    (click)="
+      addChuche({
+        name: name.value,
+        price: toNumber(price.value),
+        category: category.value,
+        color: color.value,
+        image: image.value
+      })
+    "
+  >
+    Add
+  </button>
+</div>
